@@ -107,9 +107,14 @@ a { color: inherit; text-decoration: none; }
   width: auto;
 }
 .nav-links {
-  display: flex;
+  display: none;
   list-style: none;
   gap: 2rem;
+}
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+  }
 }
 .nav-links a {
   color: rgba(14, 26, 46, 0.6);
@@ -721,6 +726,7 @@ a { color: inherit; text-decoration: none; }
   }
   .nav-toggle { display: flex; }
   .nav-links {
+    display: none;
     position: fixed;
     top: 80px; left: 0; right: 0;
     bottom: 0;
@@ -731,16 +737,10 @@ a { color: inherit; text-decoration: none; }
     align-items: center;
     justify-content: center;
     gap: 2.5rem;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.3s, visibility 0.3s;
     z-index: 200;
   }
   .nav-links.open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+    display: flex;
   }
   .nav-links a {
     font-size: 1.25rem;
