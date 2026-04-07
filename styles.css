@@ -208,7 +208,7 @@ a { color: inherit; text-decoration: none; }
   font-size: clamp(2.5rem, 5.5vw, 4.2rem);
   font-weight: 400;
   line-height: 1.2;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--white);
   margin-bottom: 1.5rem;
   max-width: 700px;
@@ -247,13 +247,13 @@ a { color: inherit; text-decoration: none; }
   transition: all 0.25s var(--ease);
 }
 .btn-primary {
-  background: var(--teal);
+  background: #D63031;
   color: var(--white);
 }
 .btn-primary:hover {
-  background: var(--teal-dark);
+  background: #C0392B;
   transform: translateY(-1px);
-  box-shadow: 0 4px 16px rgba(44,181,181,0.3);
+  box-shadow: 0 4px 16px rgba(214,48,49,0.35);
 }
 .btn-outline {
   background: transparent;
@@ -294,7 +294,7 @@ a { color: inherit; text-decoration: none; }
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   font-weight: 400;
   line-height: 1.25;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--dark-text);
   max-width: 650px;
 }
@@ -321,7 +321,7 @@ a { color: inherit; text-decoration: none; }
 }
 .value-icon {
   width: 40px; height: 40px;
-  color: var(--teal);
+  color: #D63031;
   margin-bottom: 1.25rem;
 }
 .value-icon svg { width: 100%; height: 100%; }
@@ -345,7 +345,7 @@ a { color: inherit; text-decoration: none; }
   background: var(--navy);
 }
 .focus-section .section-tag { color: #5EE8E8; font-size: 15px; }
-.focus-section .section-title { color: var(--white); letter-spacing: 0.04em; }
+.focus-section .section-title { color: var(--white); letter-spacing: 0.05em; }
 
 .focus-grid {
   display: grid;
@@ -377,7 +377,7 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--white);
   margin-bottom: 0.5rem;
 }
@@ -451,14 +451,14 @@ a { color: inherit; text-decoration: none; }
 .industry-block-icon {
   flex-shrink: 0;
   width: 48px; height: 48px;
-  color: var(--teal);
+  color: #D63031;
 }
 .industry-block-icon svg { width: 100%; height: 100%; }
 .industry-block h2 {
   font-family: var(--font-display);
   font-size: 1.5rem;
   font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--dark-text);
   margin-bottom: 0.6rem;
 }
@@ -492,7 +492,7 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-display);
   font-size: 1.65rem;
   font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--dark-text);
   margin-bottom: 0.75rem;
 }
@@ -593,7 +593,7 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-display);
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   font-weight: 400;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--dark-text);
   margin-bottom: 0.75rem;
 }
@@ -626,7 +626,7 @@ a { color: inherit; text-decoration: none; }
   font-size: clamp(2rem, 4.5vw, 3rem);
   font-weight: 400;
   line-height: 1.2;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   color: var(--white);
   margin-bottom: 1rem;
   max-width: 650px;
