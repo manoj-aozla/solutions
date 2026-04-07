@@ -11,44 +11,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 
 <style>
+.nav-desktop{display:flex;gap:2rem;align-items:center;}
+.nav-desktop a{color:rgba(14,26,46,0.6);font-size:14px;font-weight:500;letter-spacing:0.02em;transition:color 0.2s;}
+.nav-desktop a:hover,.nav-desktop a.active{color:#0E1A2E;}
+.nav-mobile{display:none;flex-direction:column;background:#ffffff;border-top:2px solid #e0e0e0;box-shadow:0 12px 32px rgba(0,0,0,0.2);}
+.nav-mobile.open{display:flex;}
+.nav-mobile a{display:block;padding:1.1rem 2rem;font-size:1.1rem;color:#0E1A2E;font-weight:500;border-bottom:1px solid #f0f0f0;font-family:'DM Sans',sans-serif;}
+.nav-mobile a:last-child{border-bottom:none;}
+.nav-mobile a:hover,.nav-mobile a.active{background:#f4f6f9;}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.nav-toggle span{display:block;width:22px;height:2px;background:#0E1A2E;border-radius:2px;}
 @media(max-width:768px){
+  .nav-desktop{display:none!important;}
   .nav-toggle{display:flex!important;}
-  .nav-inner{height:80px!important;position:relative!important;}
+  .nav-inner{height:80px!important;}
   .logo-img{height:60px!important;}
-  .nav-links{
-    display:none!important;
-    list-style:none!important;
-    position:fixed!important;
-    top:80px!important;
-    left:0!important;
-    width:100%!important;
-    background-color:#ffffff!important;
-    flex-direction:column!important;
-    align-items:stretch!important;
-    gap:0!important;
-    z-index:9999!important;
-    border-top:2px solid #e0e0e0!important;
-    box-shadow:0 12px 32px rgba(0,0,0,0.2)!important;
-    padding:0.5rem 0!important;
-    margin:0!important;
-  }
-  .nav-links.open{display:flex!important;}
-  .nav-links li{list-style:none!important;margin:0!important;padding:0!important;}
-  .nav-links li a{
-    display:block!important;
-    padding:1.1rem 2rem!important;
-    font-size:1.1rem!important;
-    color:#0E1A2E!important;
-    font-weight:500!important;
-    border-bottom:1px solid #f0f0f0!important;
-  }
-  .nav-links li:last-child a{border-bottom:none!important;}
-  .nav-links li a:hover,
-  .nav-links li a.active{background-color:#f4f6f9!important;}
-  .nav-links li a.active::after{display:none!important;}
+}
+@media(min-width:769px){
+  .nav-mobile{display:none!important;}
 }
 </style>
 </head>
@@ -57,18 +40,23 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="/" class="nav-logo">
-        
         <img src="Aozla-logo.png" alt="Aozla" class="logo-img">
       </a>
+      <div class="nav-desktop" id="navDesktop">
+        <a href="/">Home</a>
+        <a href="what-we-do.html">What We Do</a>
+        <a href="industries.html" class="active">Industries</a>
+        <a href="contact.html">Contact</a>
+      </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="/">Home</a></li>
-        <li><a href="what-we-do.html">What We Do</a></li>
-        <li><a href="industries.html" class="active">Industries</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="/">Home</a>
+      <a href="what-we-do.html">What We Do</a>
+      <a href="industries.html" class="active">Industries</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
