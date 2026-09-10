@@ -269,6 +269,17 @@ a { color: inherit; text-decoration: none; }
   border-color: rgba(255,255,255,0.5);
   background: rgba(255,255,255,0.05);
 }
+.btn-outline-dark {
+  background: transparent;
+  color: var(--dark-text);
+  border: 1.5px solid var(--mid-grey);
+  margin-left: 0.75rem;
+}
+.btn-outline-dark:hover {
+  border-color: var(--teal);
+  color: var(--teal-dark);
+  background: rgba(44,181,181,0.06);
+}
 .btn-lg {
   padding: 1rem 2.25rem;
   font-size: 15px;
@@ -792,6 +803,10 @@ a { color: inherit; text-decoration: none; }
   .hero-actions .btn {
     width: 100%;
     text-align: center;
+  }
+  .btn-outline-dark {
+    margin-left: 0;
+    margin-top: 0.75rem;
   }
 }
 
