@@ -1013,7 +1013,22 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 768px) {
   .promise-band-inner {
     flex-direction: column;
-    gap: 1.75rem;
+    gap: 0;
+    align-items: stretch;
+  }
+  .promise-item {
+    text-align: left;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .promise-item:last-child {
+    border-bottom: none;
+  }
+  .promise-figure {
+    margin-bottom: 0.25rem;
+  }
+  .promise-label {
+    min-height: 0;
   }
   .promise-divider { display: none; }
   .model-flow {
