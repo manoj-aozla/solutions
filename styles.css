@@ -794,3 +794,270 @@ a { color: inherit; text-decoration: none; }
     text-align: center;
   }
 }
+
+/* ============================================
+   HERO ARC (three-beat positioning line)
+   ============================================ */
+.hero-arc {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  color: var(--teal-light);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
+}
+
+/* ============================================
+   PROMISE BAND
+   ============================================ */
+.promise-band {
+  background: var(--navy);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 2.5rem 0;
+}
+.promise-band-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.promise-item {
+  flex: 1;
+  text-align: center;
+}
+.promise-figure {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  color: #D63031;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.4rem;
+}
+.promise-label {
+  display: block;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+}
+.promise-divider {
+  width: 1px;
+  align-self: stretch;
+  background: rgba(255,255,255,0.12);
+}
+
+/* ============================================
+   SIX-STAGE MODEL
+   ============================================ */
+.model-section { background: var(--light-grey); }
+.model-flow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.model-stage {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--mid-grey);
+  border-radius: 12px;
+  padding: 2rem 1.75rem;
+  transition: all 0.3s var(--ease);
+}
+.model-stage:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(11,29,58,0.08);
+}
+.model-stage-gate {
+  border-color: #D63031;
+  border-width: 2px;
+  background: linear-gradient(180deg, #fff 0%, #fdf3f3 100%);
+}
+.model-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--teal-dark);
+  display: block;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.03em;
+}
+.model-stage-gate .model-num { color: #D63031; }
+.model-stage h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--dark-text);
+  margin-bottom: 0.6rem;
+}
+.model-stage p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--body-text);
+  margin-bottom: 1.25rem;
+}
+.model-fee {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+}
+.model-fee-fixed {
+  background: rgba(44,181,181,0.12);
+  color: var(--teal-dark);
+}
+.model-fee-gate {
+  background: #D63031;
+  color: #fff;
+}
+.model-fee-outcome {
+  background: rgba(214,48,49,0.1);
+  color: #C0392B;
+}
+.model-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* ============================================
+   RUNOPS / DAY-2
+   ============================================ */
+.runops-section { background: var(--navy); }
+.runops-section .section-tag { color: #5EE8E8; font-size: 15px; }
+.runops-section .section-title { color: var(--white); letter-spacing: 0.05em; }
+.runops-inner {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.runops-lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 1.5rem;
+}
+.runops-list {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+.runops-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.85rem;
+  font-size: 1.02rem;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.5;
+}
+.runops-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.55em;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #D63031;
+}
+.runops-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.runops-metric {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+}
+.runops-metric-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: #5EE8E8;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
+}
+.runops-metric-label {
+  display: block;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.5;
+}
+
+/* ============================================
+   RESPONSIVE — new sections
+   ============================================ */
+@media (max-width: 768px) {
+  .promise-band-inner {
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+  .promise-divider { display: none; }
+  .model-flow {
+    grid-template-columns: 1fr;
+  }
+  .runops-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* ============================================
+   STAGE DETAIL ROWS (How We Work page)
+   ============================================ */
+.stage-detail {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--mid-grey);
+}
+.stage-detail:last-child { border-bottom: none; }
+.stage-detail-num {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  color: var(--teal-dark);
+  flex-shrink: 0;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  min-width: 70px;
+}
+.stage-detail-gate .stage-detail-num { color: #D63031; }
+.stage-detail-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--dark-text);
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.stage-detail-body p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--body-text);
+}
+.stage-tag {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+}
+.stage-tag-fixed { background: rgba(44,181,181,0.12); color: var(--teal-dark); }
+.stage-tag-gate { background: #D63031; color: #fff; }
+.stage-tag-outcome { background: rgba(214,48,49,0.1); color: #C0392B; }
+
+@media (max-width: 768px) {
+  .stage-detail { flex-direction: column; gap: 0.5rem; }
+  .stage-detail-num { font-size: 2rem; min-width: 0; }
+}
