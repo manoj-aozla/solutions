@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Aozla AI and agentic transformation use cases across Marketing & Sales, HR, Finance, Procurement, and Insurance — each with sample KPIs so you can measure the outcome.">
-  <meta name="keywords" content="AI use cases, agentic AI, lead routing, quote to cash, accounts receivable automation, financial close, claims processing, contract review, employee onboarding, KPIs">
+  <meta name="description" content="Aozla AI and agentic use cases across Marketing & Sales, HR, Finance, Procurement, Insurance, and AI model infrastructure (on-prem LLM deployment, hierarchical model routing) — each with sample KPIs.">
+  <meta name="keywords" content="AI use cases, agentic AI, on-premise LLM deployment, data sovereignty, open weight models, hierarchical model routing, lead routing, accounts receivable automation, financial close, claims processing, KPIs">
   <meta name="robots" content="index, follow">
   <title>Use Cases — AI Transformation with Measurable KPIs | Aozla</title>
   <meta property="og:title" content="Use Cases — AI Transformation with Measurable KPIs | Aozla">
@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=18">
+  <link rel="stylesheet" href="styles.css?v=23">
 
 <style>
 .nav-desktop{display:flex;gap:2rem;align-items:center;}
@@ -75,11 +75,45 @@
     </div>
   </header>
 
+  <nav class="uc-tabs" aria-label="Use case categories">
+    <div class="container uc-tabs-inner">
+      <a href="#model-harness">Model &amp; Harness</a>
+      <a href="#marketing-sales">Marketing &amp; Sales</a>
+      <a href="#human-resources">Human Resources</a>
+      <a href="#finance">Finance</a>
+      <a href="#procurement">Procurement</a>
+      <a href="#insurance">Insurance</a>
+    </div>
+  </nav>
+
   <!-- MARKETING & SALES -->
-  <section class="section uc-section">
+  <!-- MODEL & HARNESS -->
+  <section id="model-harness" class="section uc-section">
     <div class="container">
       <div class="uc-group-head">
         <span class="uc-group-num">01</span>
+        <h2>Model &amp; Harness</h2>
+        <p>The AI infrastructure decisions that determine sovereignty, cost, and performance &mdash; architected for how your enterprise actually operates.</p>
+      </div>
+      <div class="uc-grid">
+        <div class="uc-card">
+          <h3>On-Premise LLM Deployment &amp; Data Sovereignty</h3>
+          <p>Deploy open-weight LLMs locally, trained on your proprietary data that never leaves your premises &mdash; purpose-built for regulated markets and data-residency requirements.</p>
+          <div class="uc-kpis"><span class="uc-kpi-label">Sample KPIs</span><span class="uc-kpi">Data-residency &amp; compliance adherence (100% on-prem)</span><span class="uc-kpi">Audit / regulatory findings avoided</span></div>
+        </div>
+        <div class="uc-card">
+          <h3>Hierarchical Model Routing</h3>
+          <p>A decentralized model architecture: frontier models for high-end research, complex problems, and orchestration &mdash; and efficient mid- and lower-cost models for everyday speed, automation, and productivity across the company.</p>
+          <div class="uc-kpis"><span class="uc-kpi-label">Sample KPIs</span><span class="uc-kpi">Blended cost per query (vs. frontier-only)</span><span class="uc-kpi">Quality retention at reduced cost</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="marketing-sales" class="section uc-section uc-section-alt">
+    <div class="container">
+      <div class="uc-group-head">
+        <span class="uc-group-num">02</span>
         <h2>Marketing &amp; Sales</h2>
         <p>Turn pipeline into predictable revenue &mdash; faster routing, sharper qualification, and cleaner data across the funnel.</p>
       </div>
@@ -129,10 +163,10 @@
   </section>
 
   <!-- HR -->
-  <section class="section uc-section uc-section-alt">
+  <section id="human-resources" class="section uc-section">
     <div class="container">
       <div class="uc-group-head">
-        <span class="uc-group-num">02</span>
+        <span class="uc-group-num">03</span>
         <h2>Human Resources</h2>
         <p>Find, hire, and onboard the right people faster &mdash; with less manual coordination.</p>
       </div>
@@ -152,10 +186,10 @@
   </section>
 
   <!-- FINANCE -->
-  <section class="section uc-section">
+  <section id="finance" class="section uc-section uc-section-alt">
     <div class="container">
       <div class="uc-group-head">
-        <span class="uc-group-num">03</span>
+        <span class="uc-group-num">04</span>
         <h2>Finance</h2>
         <p>Accelerate cash, tighten the close, and bring discipline to planning and spend.</p>
       </div>
@@ -190,10 +224,10 @@
   </section>
 
   <!-- PROCUREMENT -->
-  <section class="section uc-section uc-section-alt">
+  <section id="procurement" class="section uc-section">
     <div class="container">
       <div class="uc-group-head">
-        <span class="uc-group-num">04</span>
+        <span class="uc-group-num">05</span>
         <h2>Procurement</h2>
         <p>Move faster on contracts and vendors while raising governance and reducing risk.</p>
       </div>
@@ -213,10 +247,10 @@
   </section>
 
   <!-- INSURANCE -->
-  <section class="section uc-section">
+  <section id="insurance" class="section uc-section uc-section-alt">
     <div class="container">
       <div class="uc-group-head">
-        <span class="uc-group-num">05</span>
+        <span class="uc-group-num">06</span>
         <h2>Insurance</h2>
         <p>Process policies and claims faster and more accurately, with better customer experience.</p>
       </div>
