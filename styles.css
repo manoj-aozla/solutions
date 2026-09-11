@@ -1365,3 +1365,97 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 768px) {
   .security-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================
+   TRANSFORM NOW — self-selection entry
+   ============================================ */
+.transform-now-section { background: var(--navy); }
+.transform-now-section .section-tag { color: #5EE8E8; font-size: 15px; }
+.transform-now-section .section-title { color: var(--white); letter-spacing: 0.05em; }
+.tn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.tn-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.25s var(--ease), background 0.25s var(--ease);
+}
+.tn-card:hover {
+  border-color: rgba(94,232,232,0.5);
+  background: rgba(255,255,255,0.06);
+}
+.tn-head {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1.5rem 1.75rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "title toggle" "hook toggle";
+  gap: 0.25rem 1rem;
+  align-items: center;
+  font-family: var(--font-body);
+}
+.tn-title {
+  grid-area: title;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  line-height: 1.2;
+}
+.tn-hook {
+  grid-area: hook;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.4;
+}
+.tn-toggle {
+  grid-area: toggle;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #5EE8E8;
+  line-height: 1;
+  transition: transform 0.25s var(--ease);
+}
+.tn-card.open .tn-toggle { transform: rotate(45deg); }
+.tn-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s var(--ease);
+  padding: 0 1.75rem;
+}
+.tn-card.open .tn-body {
+  max-height: 320px;
+  padding-bottom: 1.5rem;
+}
+.tn-body p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 0.9rem;
+  padding-top: 0.25rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.tn-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #5EE8E8;
+}
+.tn-link:hover { color: #8af3f3; }
+
+/* Mobile: whole card is a jump link; hide toggle + body */
+@media (max-width: 768px) {
+  .tn-grid { grid-template-columns: 1fr; }
+  .tn-toggle { display: none; }
+  .tn-body { display: none !important; }
+  .tn-head { cursor: pointer; }
+}

@@ -30,3 +30,32 @@ document.querySelectorAll('.value-card, .focus-item, .service-block, .industry-b
   el.style.transition = 'opacity 0.5s cubic-bezier(0.25,0.46,0.45,0.94), transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94)';
   observer.observe(el);
 });
+
+// Transform Now — desktop expand / mobile jump
+(function() {
+  var cards = document.querySelectorAll('.tn-card');
+  if (!cards.length) return;
+  cards.forEach(function(card) {
+    var head = card.querySelector('.tn-head');
+    var target = card.getAttribute('data-target');
+    if (!head) return;
+    head.addEventListener('click', function() {
+      // Mobile: jump straight to the matching use-cases section
+      if (window.matchMedia('(max-width: 768px)').matches) {
+        if (target) window.location.href = target;
+        return;
+      }
+      // Desktop: toggle this card; close others for a clean accordion feel
+      var isOpen = card.classList.contains('open');
+      cards.forEach(function(c) {
+        c.classList.remove('open');
+        var h = c.querySelector('.tn-head');
+        if (h) h.setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        card.classList.add('open');
+        head.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
