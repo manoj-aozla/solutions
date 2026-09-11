@@ -1327,6 +1327,9 @@ a { color: inherit; text-decoration: none; }
    SECURITY & TRUST (Home)
    ============================================ */
 .security-section { background: var(--light-grey); }
+.security-section .section-header {
+  margin-bottom: 1.25rem;
+}
 .security-lead {
   font-size: 1.1rem;
   line-height: 1.7;
