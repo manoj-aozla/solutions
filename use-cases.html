@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=24">
+  <link rel="stylesheet" href="styles.css?v=25">
 
 <style>
 .nav-desktop{display:flex;gap:2rem;align-items:center;}
@@ -78,6 +78,7 @@
   <nav class="uc-tabs" aria-label="Use case categories">
     <div class="container uc-tabs-inner">
       <a href="#model-harness">Model &amp; Harness <span class="uc-tab-suffix">use cases</span></a>
+      <a href="#security-governance">Security &amp; Governance <span class="uc-tab-suffix">use cases</span></a>
       <a href="#marketing-sales">Marketing &amp; Sales <span class="uc-tab-suffix">use cases</span></a>
       <a href="#human-resources">Human Resources <span class="uc-tab-suffix">use cases</span></a>
       <a href="#finance">Enterprise Finance <span class="uc-tab-suffix">use cases</span></a>
@@ -110,10 +111,48 @@
     </div>
   </section>
 
-  <section id="marketing-sales" class="section uc-section uc-section-alt">
+  <!-- SECURITY, COMPLIANCE & GOVERNANCE -->
+  <section id="security-governance" class="section uc-section uc-section-alt">
     <div class="container">
       <div class="uc-group-head">
         <span class="uc-group-num">02</span>
+        <h2>Security, Compliance &amp; Governance</h2>
+        <p>Security by Design and Security in the Design &mdash; on-premise, in cloud, or at the edge. When we re-architect a flow, it never comes out less secure than it went in. New data, new agents, and new harnesses create new surfaces of exposure; Aozla closes those gaps and verifies safety before anything reaches production.</p>
+      </div>
+      <div class="uc-grid">
+        <div class="uc-card">
+          <h3>AI Security &amp; Vulnerability Assurance</h3>
+          <p>Every output passes infosec rigor at the Stage gate &mdash; review, red-teaming, and vulnerability elimination &mdash; before production release. Nothing ships unvetted.</p>
+          <div class="uc-kpis"><span class="uc-kpi-label">Sample KPIs</span><span class="uc-kpi">Vulnerabilities remediated pre-release</span><span class="uc-kpi">Critical findings escaping to production (target: zero)</span></div>
+        </div>
+        <div class="uc-card">
+          <h3>Data Protection Across Environments</h3>
+          <p>Secure data at rest, in use, and in motion &mdash; whether the workload runs on-premise, in cloud, or at the edge &mdash; without weakening any existing secure flow.</p>
+          <div class="uc-kpis"><span class="uc-kpi-label">Sample KPIs</span><span class="uc-kpi">Data-residency &amp; encryption coverage</span><span class="uc-kpi">Sensitive-data exposure incidents (target: zero)</span></div>
+        </div>
+        <div class="uc-card">
+          <h3>Human-in-the-Loop &amp; On-the-Loop Governance</h3>
+          <p>We design approval and oversight checkpoints into multi-person, multi-agent workflows &mdash; humans in the loop where a decision is required, on the loop where monitoring and intervention matter. Where policies are set, our agent hierarchy senses, detects, and remediates automatically.</p>
+          <div class="uc-kpis"><span class="uc-kpi-label">Sample KPIs</span><span class="uc-kpi">Policy-required approvals enforced</span><span class="uc-kpi">Exception / escalation resolution time</span></div>
+        </div>
+        <div class="uc-card">
+          <h3>Regulatory Compliance Automation</h3>
+          <p>Compliance built into the workflow &mdash; finance (SOX), health (HIPAA), insurance, and multi-country privacy governance &mdash; with alerts, filters, and audit trails that make evidence continuous, not a fire drill.</p>
+          <div class="uc-kpis"><span class="uc-kpi-label">Sample KPIs</span><span class="uc-kpi">Audit-readiness / control coverage</span><span class="uc-kpi">Compliance exceptions per cycle</span></div>
+        </div>
+        <div class="uc-card">
+          <h3>AI Governance &amp; Model Risk</h3>
+          <p>Model documentation, bias and drift monitoring, and full auditability across your model hierarchy &mdash; so every AI decision is explainable and defensible.</p>
+          <div class="uc-kpis"><span class="uc-kpi-label">Sample KPIs</span><span class="uc-kpi">Models under active monitoring</span><span class="uc-kpi">Time-to-audit-evidence</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="marketing-sales" class="section uc-section">
+    <div class="container">
+      <div class="uc-group-head">
+        <span class="uc-group-num">03</span>
         <h2>Marketing &amp; Sales</h2>
         <p>Turn pipeline into predictable revenue &mdash; faster routing, sharper qualification, and cleaner data across the funnel.</p>
       </div>
@@ -163,10 +202,10 @@
   </section>
 
   <!-- HR -->
-  <section id="human-resources" class="section uc-section">
+  <section id="human-resources" class="section uc-section uc-section-alt">
     <div class="container">
       <div class="uc-group-head">
-        <span class="uc-group-num">03</span>
+        <span class="uc-group-num">04</span>
         <h2>Human Resources</h2>
         <p>Find, hire, and onboard the right people faster &mdash; with less manual coordination.</p>
       </div>
@@ -186,10 +225,10 @@
   </section>
 
   <!-- FINANCE -->
-  <section id="finance" class="section uc-section uc-section-alt">
+  <section id="finance" class="section uc-section">
     <div class="container">
       <div class="uc-group-head">
-        <span class="uc-group-num">04</span>
+        <span class="uc-group-num">05</span>
         <h2>Enterprise Finance</h2>
         <p>Accelerate cash, tighten the close, and bring discipline to planning and spend.</p>
       </div>
@@ -224,10 +263,10 @@
   </section>
 
   <!-- PROCUREMENT -->
-  <section id="procurement" class="section uc-section">
+  <section id="procurement" class="section uc-section uc-section-alt">
     <div class="container">
       <div class="uc-group-head">
-        <span class="uc-group-num">05</span>
+        <span class="uc-group-num">06</span>
         <h2>Procurement</h2>
         <p>Move faster on contracts and vendors while raising governance and reducing risk.</p>
       </div>
@@ -247,10 +286,10 @@
   </section>
 
   <!-- INSURANCE -->
-  <section id="insurance" class="section uc-section uc-section-alt">
+  <section id="insurance" class="section uc-section">
     <div class="container">
       <div class="uc-group-head">
-        <span class="uc-group-num">06</span>
+        <span class="uc-group-num">07</span>
         <h2>Insurance</h2>
         <p>Process policies and claims faster and more accurately, with better customer experience.</p>
       </div>
