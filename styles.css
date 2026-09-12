@@ -1274,6 +1274,7 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid var(--mid-grey);
 }
 .uc-tabs-inner {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -1308,7 +1309,8 @@ a { color: inherit; text-decoration: none; }
 /* offset anchor jumps so sticky nav + tabs don't cover section headers */
 .uc-section { scroll-margin-top: 200px; }
 
-@media (max-width: 768px) {
+/* Narrow screens: horizontal scroll with clear cues */
+@media (max-width: 900px) {
   .uc-tabs {
     top: 80px;
   }
@@ -1316,10 +1318,38 @@ a { color: inherit; text-decoration: none; }
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+    padding-bottom: 1.5rem;
+    /* right-edge fade to signal more content */
+    -webkit-mask-image: linear-gradient(to right, #000 88%, transparent 100%);
+    mask-image: linear-gradient(to right, #000 88%, transparent 100%);
   }
-  .uc-tabs-inner::-webkit-scrollbar { display: none; }
+  .uc-tabs-inner a { scroll-snap-align: start; }
+  /* slim visible scrollbar as a second cue */
+  .uc-tabs-inner::-webkit-scrollbar { height: 4px; }
+  .uc-tabs-inner::-webkit-scrollbar-thumb {
+    background: var(--mid-grey);
+    border-radius: 4px;
+  }
+  .uc-tabs-inner { scrollbar-width: thin; scrollbar-color: var(--mid-grey) transparent; }
+  /* explicit swipe hint under the tabs */
+  .uc-tabs::after {
+    content: "\2190  swipe for more  \2192";
+    display: block;
+    text-align: center;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--slate);
+    padding: 0 0 0.5rem;
+    opacity: 0.7;
+  }
   .uc-section { scroll-margin-top: 150px; }
+}
+@media (min-width: 901px) {
+  /* On desktop, if tabs ever overflow, still allow wrap so all show */
+  .uc-tabs-inner { flex-wrap: wrap; }
 }
 
 /* ============================================
