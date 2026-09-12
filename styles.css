@@ -494,7 +494,7 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid var(--mid-grey);
 }
 .service-block:first-child { padding-top: 0; }
-.service-block:last-child { border-bottom: none; }
+.service-block:last-child { border-bottom: 1px solid var(--mid-grey); }
 
 .service-label {
   font-size: 18px;
@@ -1558,4 +1558,29 @@ a { color: inherit; text-decoration: none; }
   border: none;
   border-top: 1px solid var(--mid-grey);
   margin: 2.5rem 0 0;
+}
+
+
+/* What We Do — tighten space above the final CTA */
+.section + .cta-section { padding-top: 2.5rem; }
+
+/* Use Cases — "Interested?" pill */
+.uc-pill {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: 1.1rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: #D63031;
+  border-radius: 50px;
+  transition: all 0.2s var(--ease);
+}
+.uc-pill:hover {
+  background: #C0392B;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(214,48,49,0.3);
 }
