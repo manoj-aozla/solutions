@@ -1401,7 +1401,7 @@ a { color: inherit; text-decoration: none; }
 .transform-now-section {
   position: relative;
   background: var(--navy);
-  background-image: linear-gradient(rgba(11,29,58,0.82), rgba(11,29,58,0.88)), url('aozla-blue-wave-bg.jpg');
+  background-image: linear-gradient(rgba(11,29,58,0.55), rgba(11,29,58,0.66)), url('aozla-blue-wave-bg.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -1530,7 +1530,7 @@ a { color: inherit; text-decoration: none; }
 /* Why Aozla tighter */
 .value-section {
   background: var(--light-grey);
-  background-image: linear-gradient(rgba(244,246,249,0.90), rgba(244,246,249,0.94)), url('aozla-abstract-color-shapes-2.jpg');
+  background-image: linear-gradient(rgba(244,246,249,0.72), rgba(244,246,249,0.80)), url('aozla-abstract-color-shapes-2.jpg');
   background-size: cover;
   background-position: center;
   padding-top: 3rem;
@@ -1633,22 +1633,22 @@ a { color: inherit; text-decoration: none; }
    PAGE-HERO BACKGROUND IMAGES (per page)
    ============================================ */
 .page-hero.ph-how {
-  background-image: linear-gradient(rgba(11,29,58,0.80), rgba(11,29,58,0.86)), url('aozla-people-silhouettes-pastel-2.jpg');
+  background-image: linear-gradient(rgba(11,29,58,0.55), rgba(11,29,58,0.66)), url('aozla-people-silhouettes-pastel-2.jpg');
   background-size: cover; background-position: center;
 }
 .page-hero.ph-what {
-  background-image: linear-gradient(rgba(11,29,58,0.80), rgba(11,29,58,0.86)), url('aozla-abstract-red-blue-color-pallete-4.jpg');
+  background-image: linear-gradient(rgba(11,29,58,0.55), rgba(11,29,58,0.66)), url('aozla-abstract-red-blue-color-pallete-4.jpg');
   background-size: cover; background-position: center;
 }
 .page-hero.ph-usecases {
-  background-image: linear-gradient(rgba(11,29,58,0.80), rgba(11,29,58,0.86)), url('aozla-color-shapes-1.png');
+  background-image: linear-gradient(rgba(11,29,58,0.55), rgba(11,29,58,0.66)), url('aozla-color-shapes-1.png');
   background-size: cover; background-position: center;
 }
 .page-hero.ph-industries {
-  background-image: linear-gradient(rgba(11,29,58,0.80), rgba(11,29,58,0.86)), url('aozla-abstract-shapes-colors-6.jpg');
+  background-image: linear-gradient(rgba(11,29,58,0.55), rgba(11,29,58,0.66)), url('aozla-abstract-shapes-colors-6.jpg');
   background-size: cover; background-position: center;
 }
 .page-hero.ph-contact {
-  background-image: linear-gradient(rgba(11,29,58,0.80), rgba(11,29,58,0.86)), url('aozla-abstract-lines-waves-colors-3.jpg');
+  background-image: linear-gradient(rgba(11,29,58,0.55), rgba(11,29,58,0.66)), url('aozla-abstract-lines-waves-colors-3.jpg');
   background-size: cover; background-position: center;
 }
