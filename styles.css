@@ -1448,7 +1448,7 @@ a { color: inherit; text-decoration: none; }
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.12);
 }
-.tn-icon svg { width: 28px; height: 28px; display: block; }
+.tn-icon svg { width: 38px; height: 38px; display: block; }
 .tn-card:hover .tn-icon {
   background: rgba(94,232,232,0.10);
   border-color: rgba(94,232,232,0.35);
