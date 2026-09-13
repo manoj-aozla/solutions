@@ -1431,11 +1431,27 @@ a { color: inherit; text-decoration: none; }
   cursor: pointer;
   padding: 1.5rem 1.75rem;
   display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-areas: "title toggle" "hook toggle";
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: "icon title toggle" "icon hook toggle";
   gap: 0.25rem 1rem;
   align-items: center;
   font-family: var(--font-body);
+}
+.tn-icon {
+  grid-area: icon;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.tn-icon svg { width: 28px; height: 28px; display: block; }
+.tn-card:hover .tn-icon {
+  background: rgba(94,232,232,0.10);
+  border-color: rgba(94,232,232,0.35);
 }
 .tn-title {
   grid-area: title;
