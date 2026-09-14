@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Aozla — Component Library (internal preview)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=58">
+<style>
+  body{font-family:'DM Sans',sans-serif;margin:0;}
+  .cx{max-width:1120px;margin:0 auto;padding:2rem 1.5rem;}
+  .cx h1{font-family:'Instrument Serif',serif;font-weight:400;font-size:2rem;margin:.2rem 0 1.5rem;}
+  .cx h2{font-size:1rem;letter-spacing:.14em;text-transform:uppercase;color:#0FB0B0;margin:2.5rem 0 1rem;}
+  .band-dark{background:#0B1D3A;} .band-grey{background:#F4F6F9;} .band-white{background:#fff;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+  .row{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-bottom:1rem;}
+  .lbl{font-size:.78rem;color:#8894a8;width:100%;margin-top:.5rem;}
+  .tile-h3{font-weight:600;color:#0E1A2E;margin:0 0 .4rem;font-size:1.05rem;}
+  .tile-p{color:#3B4A61;font-size:.95rem;line-height:1.55;margin:0;}
+  @media(max-width:768px){.grid3{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="band-grey"><div class="cx">
+  <h1>Aozla Component Library — internal preview</h1>
+  <p style="color:#3B4A61;">Hover the tiles and buttons to see the interactions. This page is for review only (not linked in the site, not indexed).</p>
+
+  <h2>Tile Type 1 — Pop to white (on grey background)</h2>
+  <div class="grid3">
+    <div class="az-tile az-tile-1"><h3 class="tile-h3">Rigor before release</h3><p class="tile-p">Grey at rest. Hover to pop white with a shadow lift.</p></div>
+    <div class="az-tile az-tile-1"><h3 class="tile-h3">New surfaces, secured</h3><p class="tile-p">Border at rest, shadow on hover draws the eye.</p></div>
+    <div class="az-tile az-tile-1"><h3 class="tile-h3">Governance</h3><p class="tile-p">Best used on a grey/light section for contrast.</p></div>
+  </div>
+</div></div>
+
+<div class="band-grey"><div class="cx">
+  <h2>Tile Type 2 — Branded strip + hover shadow</h2>
+  <div class="grid3">
+    <div class="az-tile az-tile-2"><h3 class="tile-h3">Weeks, not quarters</h3><p class="tile-p">Brand strip cups the bottom. Hover lifts with shadow.</p></div>
+    <div class="az-tile az-tile-2"><h3 class="tile-h3">Built to compound</h3><p class="tile-p">White inside, works on any background.</p></div>
+    <div class="az-tile az-tile-2"><h3 class="tile-h3">We accept the challenge</h3><p class="tile-p">Hover me.</p></div>
+  </div>
+</div></div>
+
+<div class="band-grey"><div class="cx">
+  <h2>Tile Type 3 — Branded strip + permanent shadow (static)</h2>
+  <div class="grid3">
+    <div class="az-tile az-tile-3"><h3 class="tile-h3">Always lifted</h3><p class="tile-p">Permanent halo/shadow, no hover needed.</p></div>
+    <div class="az-tile az-tile-3"><h3 class="tile-h3">Brand strip</h3><p class="tile-p">Good for a "featured" row you want to stand out at rest.</p></div>
+    <div class="az-tile az-tile-3"><h3 class="tile-h3">Static</h3><p class="tile-p">Hover adds a touch more lift.</p></div>
+  </div>
+</div></div>
+
+<div class="band-dark"><div class="cx">
+  <h2 style="color:#5EE8E8;">Buttons on DARK background</h2>
+  <div class="row">
+    <a class="azb azb-1">Type 1 · Solid red &rarr;</a>
+    <a class="azb azb-2 azb-on-dark">Type 2 · Transparent outline &rarr;</a>
+    <a class="azb azb-3 azb-on-dark" style="--azb-fill:#009B9B;--azb-fill-text:#fff;">Type 3 · Fills teal on hover &rarr;</a>
+    <a class="azb azb-4 azb-on-dark">Type 4 · Fills collage on hover &rarr;</a>
+    <a class="azb azb-5">Type 5 · Collage, reverses on hover &rarr;</a>
+  </div>
+</div></div>
+
+<div class="band-grey"><div class="cx">
+  <h2>Buttons on LIGHT (grey) background</h2>
+  <div class="row">
+    <a class="azb azb-1">Type 1 · Solid red &rarr;</a>
+    <a class="azb azb-2 azb-on-light">Type 2 · Transparent outline &rarr;</a>
+    <a class="azb azb-3 azb-on-teal" style="--azb-fill:#009B9B;--azb-fill-text:#fff;">Type 3 · Fills teal on hover &rarr;</a>
+    <a class="azb azb-4 azb-on-light">Type 4 · Fills collage on hover &rarr;</a>
+    <a class="azb azb-5">Type 5 · Collage, reverses on hover &rarr;</a>
+  </div>
+</div></div>
+
+<div class="band-white"><div class="cx">
+  <h2>Buttons on WHITE background</h2>
+  <div class="row">
+    <a class="azb azb-1">Type 1 · Solid red &rarr;</a>
+    <a class="azb azb-2 azb-on-light">Type 2 · Transparent outline &rarr;</a>
+    <a class="azb azb-3 azb-on-red" style="--azb-fill:#D63031;--azb-fill-text:#fff;">Type 3 · Fills red on hover &rarr;</a>
+    <a class="azb azb-4 azb-on-light">Type 4 · Fills collage on hover &rarr;</a>
+    <a class="azb azb-5">Type 5 · Collage, reverses on hover &rarr;</a>
+  </div>
+  <p style="color:#8894a8;font-size:.8rem;margin-top:2rem;">Component library v1 — apply classes az-tile-1/2/3 and azb-1..5 (with azb-on-* modifiers) across the site once the mapping is decided.</p>
+</div></div>
+
+</body>
+</html>

@@ -1387,7 +1387,7 @@ a { color: inherit; text-decoration: none; }
 .security-item {
   background: #EDF0F4;
   border: 1px solid var(--mid-grey);
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 1.75rem;
   transition: background 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease), border-color 0.25s var(--ease);
 }
@@ -1588,7 +1588,7 @@ a { color: inherit; text-decoration: none; }
 .proven-stage {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 1.25rem 0.75rem;
   text-align: center;
 }
@@ -1697,3 +1697,182 @@ a { color: inherit; text-decoration: none; }
   color: #0B8A8A;
   text-shadow: 0 1px 6px rgba(244,246,249,0.85);
 }
+/* ============================================================
+   AOZLA COMPONENT LIBRARY — Reusable Tile & Button Standards
+   (Apply these classes to any element. Documented per the
+   TILE DESIGN and BUTTON DESIGN standards.)
+   ============================================================ */
+
+:root {
+  --brand-strip: linear-gradient(90deg, #D63031 0%, #FF6B35 30%, #FFB627 52%, #009B9B 78%, #17406b 100%);
+  --brand-collage: linear-gradient(90deg, #D63031 0%, #FF6B35 24%, #E23E7B 48%, #0FB0B0 76%, #0A6E6E 100%);
+  --brand-collage-rev: linear-gradient(270deg, #D63031 0%, #FF6B35 24%, #E23E7B 48%, #0FB0B0 76%, #0A6E6E 100%);
+  --tile-radius: 12px;
+  --btn-radius: 8px;
+}
+
+/* ------------------------------------------------------------
+   TILE TYPE 1 — POP TO WHITE, no strip, hover shadow
+   Sits on a grey/light section; pops to white + lifts on hover.
+   Usage: <div class="az-tile az-tile-1"> ... </div>
+   ------------------------------------------------------------ */
+.az-tile {
+  border-radius: var(--tile-radius);
+  padding: 1.75rem;
+  position: relative;
+  transition: background 0.25s var(--ease), box-shadow 0.25s var(--ease),
+              transform 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+.az-tile-1 {
+  background: #EDF0F4;
+  border: 1px solid var(--mid-grey);
+}
+.az-tile-1:hover {
+  background: #FFFFFF;
+  border-color: transparent;
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(11,29,58,0.14);
+}
+
+/* ------------------------------------------------------------
+   TILE TYPE 2 — BRANDED STRIP, white inside, hover shadow
+   White tile with a brand-collage strip cupping the bottom;
+   lifts + shadow on hover. Works on any background.
+   Usage: <div class="az-tile az-tile-2"> ... </div>
+   ------------------------------------------------------------ */
+.az-tile-2 {
+  background: #FFFFFF;
+  border: 1px solid var(--mid-grey);
+  overflow: hidden;
+  padding-bottom: 2.1rem;
+}
+.az-tile-2::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 14px;
+  background: var(--brand-strip);
+}
+.az-tile-2:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(11,29,58,0.16);
+  border-color: transparent;
+}
+
+/* ------------------------------------------------------------
+   TILE TYPE 3 — BRANDED STRIP, white inside, PERMANENT shadow
+   Same as Type 2 but the shadow/halo is always on (static).
+   Usage: <div class="az-tile az-tile-3"> ... </div>
+   ------------------------------------------------------------ */
+.az-tile-3 {
+  background: #FFFFFF;
+  border: 1px solid transparent;
+  overflow: hidden;
+  padding-bottom: 2.1rem;
+  box-shadow: 0 10px 30px rgba(11,29,58,0.12);
+}
+.az-tile-3::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 14px;
+  background: var(--brand-strip);
+}
+.az-tile-3:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 38px rgba(11,29,58,0.18);
+}
+
+/* ============================================================
+   BUTTON STANDARDS — reusable, hover shadow on all types
+   Base: <a class="azb ..."> Label &rarr;</a>
+   ============================================================ */
+.azb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1.6rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  background: transparent;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease),
+              border-color 0.25s var(--ease), box-shadow 0.25s var(--ease),
+              transform 0.2s var(--ease);
+  text-decoration: none;
+}
+.azb:hover { transform: translateY(-1px); }
+
+/* TYPE 1 — Solid RED, white text, hover shadow */
+.azb-1 {
+  background: #D63031;
+  color: #fff;
+  border-color: #D63031;
+}
+.azb-1:hover {
+  background: #C0392B;
+  border-color: #C0392B;
+  box-shadow: 0 8px 22px rgba(214,48,49,0.35);
+}
+
+/* TYPE 2 — TRANSPARENT, outline, stays transparent on hover + shadow
+   Set text/outline color via modifier: .azb-on-dark or .azb-on-light */
+.azb-2 { background: transparent; }
+.azb-2:hover { box-shadow: 0 8px 22px rgba(0,0,0,0.22); }
+
+/* TYPE 3 — TRANSPARENT outline → FILLS with solid color on hover + shadow
+   Default fill teal; override with --azb-fill / --azb-fill-text */
+.azb-3 {
+  background: transparent;
+}
+.azb-3:hover {
+  background: var(--azb-fill, #009B9B);
+  color: var(--azb-fill-text, #fff);
+  border-color: var(--azb-fill, #009B9B);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.22);
+}
+
+/* TYPE 4 — TRANSPARENT outline → fills with BRAND COLLAGE on hover + shadow */
+.azb-4 { background: transparent; }
+.azb-4:hover {
+  background: var(--brand-collage);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 8px 24px rgba(11,29,58,0.28);
+}
+.azb-4:hover { border-width: 0; padding: calc(0.75rem + 1.5px) calc(1.6rem + 1.5px); }
+
+/* TYPE 5 — BRAND COLLAGE fill; gradient REVERSES on hover + shadow
+   Uses a layered background so we can cross-fade L→R to R→L */
+.azb-5 {
+  position: relative;
+  color: #fff;
+  border: none;
+  padding: calc(0.75rem + 1.5px) calc(1.6rem + 1.5px);
+  background: var(--brand-collage);
+  overflow: hidden;
+  isolation: isolate;
+}
+.azb-5::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: var(--brand-collage-rev);
+  opacity: 0;
+  transition: opacity 0.35s var(--ease);
+  z-index: -1;
+}
+.azb-5:hover::before { opacity: 1; }
+.azb-5:hover {
+  box-shadow: 0 8px 24px rgba(11,29,58,0.30);
+}
+
+/* Text/outline color modifiers for transparent buttons (Types 2-4) */
+.azb-on-dark  { color: #fff; border-color: rgba(255,255,255,0.55); }
+.azb-on-light { color: var(--dark-text); border-color: var(--mid-grey); }
+.azb-on-teal  { color: #009B9B; border-color: #009B9B; }
+.azb-on-red   { color: #D63031; border-color: #D63031; }
+.azb-on-amber { color: #B8860B; border-color: #FFB627; }
