@@ -1707,7 +1707,7 @@ a { color: inherit; text-decoration: none; }
    PAGE-HERO BACKGROUND IMAGES (per page)
    ============================================ */
 .page-hero.ph-how {
-  background-image: linear-gradient(rgba(11,29,58,0.55), rgba(11,29,58,0.66)), url('aozla-img-5.png');
+  background-image: linear-gradient(to right, rgba(11,29,58,0.85) 0%, rgba(11,29,58,0.72) 30%, rgba(11,29,58,0.35) 60%, rgba(11,29,58,0.12) 100%), url('aozla-img-5-flip.png');
   background-size: cover; background-position: center;
 }
 .page-hero.ph-what {
