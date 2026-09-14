@@ -1877,3 +1877,31 @@ a { color: inherit; text-decoration: none; }
 .azb-on-teal  { color: #009B9B; border-color: #009B9B; }
 .azb-on-red   { color: #D63031; border-color: #D63031; }
 .azb-on-amber { color: #B8860B; border-color: #FFB627; }
+
+/* TYPE 1B — Solid WHITE, black text, hover shadow */
+.azb-1b {
+  background: #FFFFFF;
+  color: #0E1A2E;
+  border-color: #FFFFFF;
+}
+.azb-1b:hover {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  box-shadow: 0 8px 22px rgba(11,29,58,0.28);
+}
+
+/* TYPE 6 — Solid-fill PILL (grey / black / white), hover shadow
+   Default: light grey with dark text. Override with modifiers below. */
+.azb-6 {
+  border-radius: 50px;
+  background: var(--pill-bg, #EDF0F4);
+  color: var(--pill-text, #0E1A2E);
+  border: 1.5px solid var(--pill-border, transparent);
+}
+.azb-6:hover {
+  box-shadow: 0 8px 22px rgba(11,29,58,0.22);
+}
+/* Type 6 color presets */
+.azb-6-grey  { --pill-bg:#EDF0F4; --pill-text:#0E1A2E; --pill-border:var(--mid-grey); }
+.azb-6-black { --pill-bg:#0E1A2E; --pill-text:#ffffff; --pill-border:transparent; }
+.azb-6-white { --pill-bg:#ffffff; --pill-text:#0E1A2E; --pill-border:var(--mid-grey); }
