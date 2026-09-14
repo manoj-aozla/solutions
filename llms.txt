@@ -1,0 +1,24 @@
+# Aozla
+
+> Aozla is a Forward Deployed AI Engineering and Transformation Company — an AI and Agentic Design, Implementation and Operations partner enabling a business to scale and create measurable efficiencies in revenue capture, GTM growth, cost to serve, and productivity. Tagline: "Closer to Value."
+
+## What Aozla does
+Aozla re-architects complex, high-touch enterprise workflows with AI and agentic automation across GTM, ERP and finance, procurement, and security. Delivery is by forward-deployed teams and built on reusable AI accelerators.
+
+## Engagement model
+Aozla assesses and designs for a fixed fee, then delivers in weeks (not quarters) and gets paid on the measurable outcomes the client realizes. Everything beyond design is tied to milestones or to KPIs agreed up front. Within 90-120 days of go-live, the first planned outcomes should be measurable.
+
+## Six-stage method
+Assess -> Design -> Invest (the gate: executive sponsor + line of sight to budget) -> Engineer -> Stage -> Deploy.
+
+## Industries served
+Technology, Finance, Automotive/Rail, Healthcare, Manufacturing, Retail, and Energy — enterprise and midsize organizations in fast-paced and regulated industries where security, compliance, cost simplification, and productivity matter most.
+
+## Key pages
+- Home: https://www.aozla.com/
+- How We Work (six-stage method): https://www.aozla.com/how-we-work.html
+- What We Do (services): https://www.aozla.com/what-we-do.html
+- Use Cases (with sample KPIs): https://www.aozla.com/use-cases.html
+- Industries: https://www.aozla.com/industries.html
+- About / FAQ: https://www.aozla.com/faq.html
+- Contact: https://www.aozla.com/contact.html
