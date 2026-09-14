@@ -1142,11 +1142,12 @@ a { color: inherit; text-decoration: none; }
 }
 .uc-group-num {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 2.6rem;
   color: var(--teal-dark);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.03em;
+  line-height: 1;
   display: block;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
 }
 .uc-group-head h2 {
   font-family: var(--font-display);
@@ -1993,4 +1994,72 @@ a { color: inherit; text-decoration: none; }
 .uc-tabs-spacer {
   height: 2rem;
   background: var(--light-grey);
+}
+
+
+/* ============================================
+   HOW WE WORK — Six Stages as Type 2 tiles
+   ============================================ */
+.stage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.stage-tile {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid var(--mid-grey);
+  border-radius: 12px;
+  padding: 1.75rem 1.75rem 2.4rem;
+  overflow: hidden;
+  transition: box-shadow 0.3s var(--ease), transform 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+.stage-tile::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 12px;
+  background: var(--brand-strip);
+}
+.stage-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 38px rgba(11,29,58,0.16);
+  border-color: transparent;
+}
+.stage-tile-gate {
+  border: 2px solid #D63031;
+}
+.stage-tile-gate::after { background: #D63031; }
+.stage-tile-num {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--teal-dark);
+  letter-spacing: 0.03em;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.stage-tile-gate .stage-tile-num { color: #D63031; }
+.stage-tile h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--dark-text);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.stage-tile p {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--body-text);
+}
+@media (max-width: 900px) {
+  .stage-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .stage-grid { grid-template-columns: 1fr; }
 }
