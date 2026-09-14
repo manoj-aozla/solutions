@@ -1157,13 +1157,23 @@ a { color: inherit; text-decoration: none; }
   gap: 1.5rem;
 }
 .uc-card {
+  position: relative;
   background: var(--white);
   border: 1px solid var(--mid-grey);
   border-radius: 12px;
   padding: 1.75rem;
+  padding-bottom: 2.4rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: all 0.3s var(--ease);
+}
+.uc-card::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 12px;
+  background: var(--brand-strip);
 }
 .uc-section-alt .uc-card { background: var(--white); }
 .uc-card:hover {
@@ -1280,11 +1290,12 @@ a { color: inherit; text-decoration: none; }
   position: sticky;
   top: 120px;
   z-index: 40;
-  background: rgba(255,255,255,0.98);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--mid-grey);
-  box-shadow: 0 6px 18px rgba(11,29,58,0.06);
+  background-color: #17406b;
+  background-image: linear-gradient(rgba(11,29,58,0.72), rgba(11,29,58,0.72)), url('aozla-img-23.png');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 6px 18px rgba(11,29,58,0.18);
 }
 .uc-tabs-inner {
   position: relative;
@@ -1296,13 +1307,13 @@ a { color: inherit; text-decoration: none; }
 }
 .uc-tabs-inner a {
   display: inline-block;
-  padding: 0.5rem 1.1rem;
+  padding: 0.5rem 1.15rem;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.01em;
-  color: var(--slate);
-  background: var(--light-grey);
-  border: 1px solid var(--mid-grey);
+  color: #0E1A2E;
+  background: #ffffff;
+  border: 1px solid transparent;
   border-radius: 50px;
   white-space: nowrap;
   transition: all 0.2s var(--ease);
@@ -1310,14 +1321,16 @@ a { color: inherit; text-decoration: none; }
 .uc-tab-suffix {
   font-size: 0.7rem;
   font-weight: 500;
-  opacity: 0.6;
-  margin-left: 0.15rem;
+  color: #64748b;
+  opacity: 1;
+  margin-left: 0.2rem;
 }
 .uc-tabs-inner a:hover .uc-tab-suffix { opacity: 0.85; }
 .uc-tabs-inner a:hover {
-  background: var(--navy);
-  color: #fff;
-  border-color: var(--navy);
+  background: #ffffff;
+  color: #0E1A2E;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  transform: translateY(-1px);
 }
 /* offset anchor jumps so sticky nav + tabs don't cover section headers */
 .uc-section { scroll-margin-top: 200px; }
@@ -1354,9 +1367,9 @@ a { color: inherit; text-decoration: none; }
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--slate);
+    color: rgba(255,255,255,0.85);
     padding: 0 0 0.5rem;
-    opacity: 0.7;
+    opacity: 0.9;
   }
   .uc-section { scroll-margin-top: 150px; }
 }
@@ -1648,19 +1661,22 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   align-self: flex-start;
   margin-top: 1.1rem;
-  padding: 0.28rem 0.95rem;
+  padding: 0.32rem 1rem;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.03em;
-  color: #fff;
-  background: #37424F;
+  color: #0E1A2E;
+  background: #EDF0F4;
+  border: 1.5px solid var(--mid-grey);
   border-radius: 50px;
   transition: all 0.2s var(--ease);
 }
 .uc-pill:hover {
-  background: #0E1A2E;
+  background: #0B1D3A;
+  color: #ffffff;
+  border-color: transparent;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(14,26,46,0.25);
+  box-shadow: 0 6px 16px rgba(11,29,58,0.3);
 }
 
 
@@ -1905,3 +1921,47 @@ a { color: inherit; text-decoration: none; }
 .azb-6-grey  { --pill-bg:#EDF0F4; --pill-text:#0E1A2E; --pill-border:var(--mid-grey); }
 .azb-6-black { --pill-bg:#0E1A2E; --pill-text:#ffffff; --pill-border:transparent; }
 .azb-6-white { --pill-bg:#ffffff; --pill-text:#0E1A2E; --pill-border:var(--mid-grey); }
+
+/* TYPE 7 — Solid PILL (grey/black/white) -> BRAND COLLAGE on hover, L->R */
+.azb-7 {
+  border-radius: 50px;
+  background: var(--pill-bg, #EDF0F4);
+  color: var(--pill-text, #0E1A2E);
+  border: 1.5px solid var(--pill-border, transparent);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.azb-7::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: var(--brand-collage);
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+  z-index: -1;
+}
+.azb-7:hover { color: #fff; border-color: transparent; box-shadow: 0 8px 22px rgba(11,29,58,0.24); }
+.azb-7:hover::before { opacity: 1; }
+.azb-7-grey  { --pill-bg:#EDF0F4; --pill-text:#0E1A2E; --pill-border:var(--mid-grey); }
+.azb-7-black { --pill-bg:#0E1A2E; --pill-text:#ffffff; --pill-border:transparent; }
+.azb-7-white { --pill-bg:#ffffff; --pill-text:#0E1A2E; --pill-border:var(--mid-grey); }
+
+/* TYPE 8 — Solid LIGHT pill -> SOLID BRAND color on hover
+   Default: light grey + black text -> midnight blue + white text.
+   Override target via --pill8-hover-bg / --pill8-hover-text */
+.azb-8 {
+  border-radius: 50px;
+  background: var(--pill8-bg, #EDF0F4);
+  color: var(--pill8-text, #0E1A2E);
+  border: 1.5px solid var(--pill8-border, var(--mid-grey));
+}
+.azb-8:hover {
+  background: var(--pill8-hover-bg, #0B1D3A);
+  color: var(--pill8-hover-text, #ffffff);
+  border-color: transparent;
+  box-shadow: 0 8px 22px rgba(11,29,58,0.24);
+}
+/* Type 8 hover-color presets */
+.azb-8-navy { --pill8-hover-bg:#0B1D3A; --pill8-hover-text:#ffffff; }
+.azb-8-red  { --pill8-hover-bg:#D63031; --pill8-hover-text:#ffffff; }
+.azb-8-teal { --pill8-hover-bg:#009B9B; --pill8-hover-text:#0E1A2E; }
