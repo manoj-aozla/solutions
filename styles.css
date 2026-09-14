@@ -1719,7 +1719,7 @@ a { color: inherit; text-decoration: none; }
   background-size: cover; background-position: center;
 }
 .page-hero.ph-industries {
-  background-image: linear-gradient(rgba(11,29,58,0.55), rgba(11,29,58,0.66)), url('aozla-img-11.jpg');
+  background-image: linear-gradient(to right, rgba(11,29,58,0.85) 0%, rgba(11,29,58,0.72) 30%, rgba(11,29,58,0.35) 60%, rgba(11,29,58,0.12) 100%), url('aozla-img-11-rot.jpg');
   background-size: cover; background-position: center;
 }
 .page-hero.ph-contact {
@@ -1988,3 +1988,9 @@ a { color: inherit; text-decoration: none; }
 .azb-8-navy { --pill8-hover-bg:#0B1D3A; --pill8-hover-text:#ffffff; }
 .azb-8-red  { --pill8-hover-bg:#D63031; --pill8-hover-text:#ffffff; }
 .azb-8-teal { --pill8-hover-bg:#009B9B; --pill8-hover-text:#0E1A2E; }
+
+/* Use Cases — separation between hero and tab bar */
+.uc-tabs-spacer {
+  height: 2rem;
+  background: var(--light-grey);
+}
