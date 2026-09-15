@@ -82,6 +82,21 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 0.5rem;
 }
+.nav-logo-stacked {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+  line-height: 1;
+}
+.logo-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  color: var(--teal-dark);
+  margin-top: -0.4rem;
+  margin-left: 0.15rem;
+}
 .logo-mark {
   display: inline-flex;
   align-items: center;
@@ -2084,4 +2099,16 @@ a { color: inherit; text-decoration: none; }
 }
 @media (max-width: 640px) {
   .stage-grid { grid-template-columns: 1fr; }
+}
+
+
+/* Hero — statement below the buttons */
+.hero-arc-below {
+  margin-top: 1.75rem;
+  margin-bottom: 0;
+}
+
+/* (g) Extra bottom breathing room in hero for symmetry with the top */
+.hero-content {
+  padding-bottom: 5rem;
 }
