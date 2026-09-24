@@ -861,6 +861,16 @@ a { color: inherit; text-decoration: none; }
   .hero {
     min-height: 75vh;
   }
+  /* Mobile: cover-crop shows the centre slice (the bright globe halo) and text runs full-width,
+     so the desktop left-to-right scrim leaves the right end of each line exposed. Replace it with
+     an even, strong navy wash across the whole hero. Desktop (outside this query) is untouched. */
+  .hero::before {
+    background:
+      linear-gradient(to bottom,
+        rgba(11,29,58,0.82) 0%,
+        rgba(11,29,58,0.72) 50%,
+        rgba(11,29,58,0.84) 100%);
+  }
   .page-hero {
     padding: calc(80px + 3rem) 0 2.5rem;
   }
